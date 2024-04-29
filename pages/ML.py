@@ -8,6 +8,11 @@ st.write("ML is technique to train the computer , how to work like a human brain
 
 col1,col2,col3 = st.tabs(['Basics','Python','ML-Lifecycle'])
 with col1:
+    st.markdown("Machine Learning is of basically of two types **supervise(labeled data)** and **unsupervised(unlabeled data)**")
+    with st.expander("Distance Based Algorithm"):
+        st.subheader("Linear Regression")
+        st.subheader("Logistic Regression")
+        st.subheader("SVM")
     with st.expander("Tree based Algorithm"):
         st.subheader("Decision Tree:\n")
 
