@@ -97,4 +97,37 @@ with st.expander("How does gradient boosting differ from random forests?"):
 """)
 
 
+with st.expander("How to handle the imbalanced data"):
+   st.markdown("""### Data Augmentation
 
+Data augmentation involves generating more examples for the ML model to train on, such as rotating images so that the dataset includes images of humans turned upside down as well as the normal upright image orientation. Without data augmentation, the model might not be able to correctly recognize images of humans who are laying sideways or doing headstands since the data is imbalanced toward humans in an upright pose.
+
+### Oversampling
+
+Oversampling is a technique to increase the number of data points of a minority class via synthetic generation. As an example, SMOTE (synthetic minority oversampling technique) uses the feature vectors of the minority classes to generate synthetic data points that are located between real data points and their k-nearest neighbors. This could synthetically increase the size of the minority class(es) and improve the performance of the ML model trained on a dataset with oversampling treatment.
+
+### Undersampling
+
+Undersampling does the opposite: it reduces examples from the majority class to balance the number of data points of the majority class and minority class(es). Oversampling is generally preferred in practice since undersampling may cause useful data to be discarded, which is exacerbated when the dataset is already small.
+
+### Ensemble Methods
+
+Ensemble methods can also be used to increase model performance when dealing with an imbalanced dataset. Each model in the ensemble can be trained on a different subset of the data and can help learn the nuances of each class better.
+
+""")
+
+with st.expander("Explain boosting and bagging and what they can help with."):
+   st.markdown("""### Bagging
+Bagging trains multiple models on different subsets of the training data and combines their predictions to make a final prediction.
+### Boosting
+Boosting trains a series of models where each model tries to correct the mistakes made by the previous model. The final prediction is made by all the models. Ensemble techniques can help with a variety of issues encountered during ML training. For example, they can help with imbalanced data and reduce overfitting.
+
+
+""")
+   
+
+with st.expander("What is diff btw L1 and L2 regularization?"):
+   st.markdown("""L1 regularization, also known as lasso regularization,is a type of regularization that shrinks model parameters toward zero. L2 regularization (also known as ridge regularization) adds a penalty term to the objective function that is proportional to the square of the coefficients of the model. This penalty term shrinks the coefficients toward zero, but unlike L1 (lasso) regularization, it does not make any of the coefficients exactly equal to zero.
+
+L2 regularization can help reduce overfitting and improve the stability of the model by keeping coefficients from becoming too large. Both L1 and L2 regularization are commonly used to prevent overfitting and improve the generalization of ML models.
+ """)
