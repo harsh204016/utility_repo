@@ -131,3 +131,11 @@ with st.expander("What is diff btw L1 and L2 regularization?"):
 
 L2 regularization can help reduce overfitting and improve the stability of the model by keeping coefficients from becoming too large. Both L1 and L2 regularization are commonly used to prevent overfitting and improve the generalization of ML models.
  """)
+
+with st.expander("What are the differences between supervised and unsupervised learning?"):
+   st.markdown("""The major difference between the two types of machine learning is related to the training data that is used. Supervised learning uses labeled data while unsupervised learning uses unlabeled data. Labeled data refers to the correct output or result from the ML model already being inside the training dataset.
+
+Supervised and unsupervised learning also differ in terms of the ML model outputs. In supervised learning, the ML model aims to predict what the label would be. Unsupervised learning doesn’t predict specific label(s) but rather tries to find latent patterns and groupings within the dataset, which can be used to cluster new data points.
+
+In terms of evaluation, the two types of ML are assessed differently. Supervised learning is evaluated by comparing its outputs with the correct output (with the test/holdout/validation datasets). In unsupervised learning, the model is evaluated based on how well it groups or captures patterns within the data, via metrics such as the Jaccard score or silhouette index for clustering and receiver operating characteristic curves (ROC)/area under the curve (AUC) metrics for positive rate comparisons for anomaly detection.
+""")
