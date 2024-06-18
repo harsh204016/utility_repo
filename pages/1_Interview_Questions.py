@@ -139,3 +139,19 @@ Supervised and unsupervised learning also differ in terms of the ML model output
 
 In terms of evaluation, the two types of ML are assessed differently. Supervised learning is evaluated by comparing its outputs with the correct output (with the test/holdout/validation datasets). In unsupervised learning, the model is evaluated based on how well it groups or captures patterns within the data, via metrics such as the Jaccard score or silhouette index for clustering and receiver operating characteristic curves (ROC)/area under the curve (AUC) metrics for positive rate comparisons for anomaly detection.
 """)
+   
+
+with st.expander("What is the ROC metric, and when is it useful?"):
+   st.markdown("""The ROC (receiver operating characteristic) curve can be used to evaluate a binary classification model. The curve plots the true positive rate against the false positive rate at various thresholds—the threshold being the probability between 0 and 1, above which the prediction is considered to be that class. For example, if the threshold is set to 0.6, then the probability predictions of the model that are above 0.6 probability of being class 1 will be labeled as class 1.
+Using ROC can help us determine the trade-off in the true positive rate and the false positive rate at various thresholds, and we can then decide what is the optimal threshold to use.
+""")
+   
+with st.expander("What is the difference between precision and recall; when would you use one over the other in a classification task?"):
+   st.markdown("""
+Precision measures the accuracy of the model at making correct predictions (quality), and recall measures the model’s accuracy in terms of how many relevant items are predicted correctly (quantity). Mathematically, precision is TP / (TP + FP) while recall is TP / (TP + FN).
+
+Precision can be more important than recall when it is more critical to reduce FPs and keep them low. One example is malware detection or email spam detection, where too many false positives can lead to user distrust. FPs in email spam detection can move legitimate business emails to the spam folder, causing delays and loss of business.
+
+On the other hand, recall can be more important than precision in high-stakes predictions such as medical diagnostics. Increased recall means that there are fewer false negatives, even if that potentially causes some accidental FPs. In this situation, it’s a higher priority to minimize the chances of missing true cases.
+
+   """)

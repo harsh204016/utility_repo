@@ -2,12 +2,6 @@ import streamlit as st
 
 tab1, tab2, tab3 = st.tabs(['Statistics','Linux','Misc'])
 
-with tab2:
-
-    with st.expander("basic linux commands"):
-        st.markdown("- check top 10 process running with memory%: **ps aux --sort=-%mem | head**")
-        st.markdown("- kill any process with pid: **kill pid**")
-        st.markdown("- check total , used , free, shared memory : **free -h**")
 
 with tab1:
     st.header("stats concepts")
@@ -145,3 +139,11 @@ Bayesian Methods: Often use multivariate normal distributions for prior and post
 SVM with RBF Kernel: Uses Gaussian function to map data to a higher-dimensional space.
                                                             
                     """)
+
+    with st.expander("")    
+with tab2:
+
+    with st.expander("basic linux commands"):
+        st.markdown("- check top 10 process running with memory%: **ps aux --sort=-%mem | head**")
+        st.markdown("- kill any process with pid: **kill pid**")
+        st.markdown("- check total , used , free, shared memory : **free -h**")
