@@ -140,7 +140,6 @@ SVM with RBF Kernel: Uses Gaussian function to map data to a higher-dimensional 
                                                             
                     """)
 
-    with st.expander("")    
 with tab2:
 
     with st.expander("basic linux commands"):
